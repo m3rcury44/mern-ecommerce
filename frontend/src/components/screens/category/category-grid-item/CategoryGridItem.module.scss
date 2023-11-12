@@ -1,0 +1,196 @@
+@import '/src/assets/styles/vars';
+
+.item {
+  border-radius: 6px;
+  border: 1px solid $border-color;
+  background: #fff;
+  margin-bottom: 10px;
+  display: grid;
+}
+
+.itemImg {
+  border-bottom: 1px solid $border-color;
+  padding: 20px;
+  text-align: center;
+
+  img {
+    height: 256.5px;
+    width: 256.5px;
+    object-fit: contain;
+  }
+}
+
+.itemFooter {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.itemInfo {
+  h4 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: $p-color;
+    line-height: 24px;
+  }
+}
+
+.itemFavorite {
+  button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 1px solid $border-color;
+  }
+
+  img {
+    padding: 4px;
+    filter: invert(28%) sepia(71%) saturate(2793%) hue-rotate(209deg) brightness(99%) contrast(100%);
+  }
+}
+
+@media (max-width: 1260px) {
+  .itemImg {
+    img {
+      height: 230px;
+      width: 230px;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .itemImg {
+    img {
+      height: 197px;
+      width: 197px;
+    }
+  }
+
+  .itemInfo {
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 1090px) {
+  .itemImg {
+    img {
+      height: 163px;
+      width: 163px;
+    }
+  }
+
+  .itemInfo {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .itemImg {
+    img {
+      height: 226.5px;
+      width: 226.5px;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .itemImg {
+    img {
+      height: 181.5px;
+      width: 181.5px;
+    }
+  }
+
+  .itemInfo {
+    p {
+      font-size: 13.9px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .item {
+    border-radius: 0;
+  }
+
+  .itemImg {
+    padding: 10px;
+
+    img {
+      height: 215px;
+      width: 215px;
+    }
+  }
+
+  .itemFooter {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .itemInfo {
+    h4 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      display: flex;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .itemImg {
+    img {
+      height: 190px;
+      width: 190px;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .itemImg {
+    img {
+      height: 160px;
+      width: 160px;
+    }
+  }
+
+  .itemInfo {
+    p {
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .itemImg {
+    img {
+      height: 140px;
+      width: 140px;
+    }
+  }
+
+  .itemFavorite {
+    img {
+      height: 28px;
+    }
+  }
+
+  .itemInfo {
+    h4 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}

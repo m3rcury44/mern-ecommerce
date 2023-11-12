@@ -1,0 +1,25 @@
+@import 'src/assets/styles/vars';
+
+.buttons {
+  display: grid;
+  gap: 7px;
+}
+
+.joinButton {
+  background: $background-blue;
+  color: #fff;
+
+  button {
+    font-weight: 500;
+  }
+}
+
+.logInButton {
+  background: #fff;
+  color: #0D6EFD;
+  border: 1px solid $border-color;
+
+  button {
+    font-weight: 600;
+  }
+}

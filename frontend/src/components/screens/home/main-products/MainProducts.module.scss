@@ -1,0 +1,186 @@
+@import '/src/assets/styles/vars';
+
+.adaptiveSkeleton {
+  div {
+    height: 236px;
+    margin: 20px 0;
+  }
+}
+
+.products {
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  display: flex;
+  background: #fff;
+  margin: 20px 0;
+  max-height: 250px;
+}
+
+.categoryInfo {
+  position: relative;
+
+  img {
+    height: 248px;
+    border-bottom-left-radius: 6px;
+    width: 240px;
+    object-fit: cover;
+  }
+}
+
+.categoryInfoText {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  button {
+    margin-top: 20px;
+    background: #fff;
+  }
+}
+
+.productsList {
+  display: grid;
+  grid-template: auto / repeat(4, 1fr);
+}
+
+.productItem {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $border-color;
+
+  img {
+    height: 90px;
+    width: 90px;
+    object-fit: contain;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 6px;
+  }
+
+  &:nth-last-child(5) {
+    border-top-right-radius: 6px;
+  }
+}
+
+.categoryBtn {
+  display: none;
+}
+
+@media (max-width: 1260px) {
+  .productItem {
+    img {
+      height: 85px;
+      width: 85px;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .productItem {
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+}
+
+@media (max-width: 1090px) {
+  .productItem {
+    p {
+      font-size: 14px;
+    }
+
+    img {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .adaptiveSkeleton {
+    div {
+      height: 186px;
+    }
+  }
+
+  .categoryInfo {
+    display: none;
+  }
+
+  .products {
+    border: none;
+  }
+
+  .productsList {
+    border: 1px solid $border-color;
+    border-radius: 6px;
+  }
+
+  .productItem {
+    &:first-child {
+      border-top-left-radius: 6px;
+    }
+
+    &:nth-last-child(4) {
+      border-bottom-left-radius: 6px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .products {
+    display: grid;
+  }
+
+  .productsList {
+    grid-template: auto / repeat(3, 1fr);
+    overflow-x: scroll;
+    display: flex;
+    border-radius: 0;
+  }
+
+  .categoryInfo {
+    img {
+      display: flex;
+      background: none;
+    }
+
+    a {
+      display: none;
+    }
+  }
+
+  .categoryBtn {
+    display: flex;
+
+    button {
+      font-weight: 500;
+      font-size: 20px;
+      padding: 20px;
+      color: $blue;
+      box-shadow: none;
+    }
+  }
+
+  .productItem {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 10px;
+
+    img {
+      height: 120px;
+      width: 120px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    &:nth-child(n) {
+      border-radius: 0;
+    }
+  }
+}

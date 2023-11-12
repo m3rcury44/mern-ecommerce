@@ -1,0 +1,145 @@
+@import '/src/assets/styles/vars';
+
+$bar-width: 40px;
+$bar-height: 6px;
+$hamburger-gap: 6px;
+$animation-timing: 200ms ease-in-out;
+$hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
+$x-width: calc($hamburger-height * 1.41421356237);
+
+.menu {
+  user-select: none;
+}
+
+.hamburgerMenu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: $hamburger-gap;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+
+.hamburgerBar {
+  position: relative;
+  width: $bar-width;
+  height: $bar-height;
+  background: #000000;
+  transition: all .2s ease-in-out;
+  border-radius: 9999px;
+}
+
+.hamburgerMenu.open .hamburgerBar {
+  transform-origin: left center;
+}
+
+.hamburgerMenu.open {
+  position: fixed;
+  top: 30px;
+}
+
+.hamburgerMenu.open .hamburgerBar:nth-child(1) {
+  rotate: 45deg;
+  width: $x-width;
+  translate: 0 calc($bar-height / -2);
+}
+
+.hamburgerMenu.open .hamburgerBar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburgerMenu.open .hamburgerBar:nth-child(3) {
+  rotate: -45deg;
+  width: $x-width;
+  translate: 0 calc($bar-height / 2);
+}
+
+.blur {
+  backdrop-filter: blur(2px);
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 40vw;
+}
+
+.sidebar {
+  background-color: #fff;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  translate: -140vw;
+  min-height: 100vh;
+  transition: translate .2s ease-in-out;
+  width: 40vw;
+}
+
+.sidebarContent {
+  padding: 80px calc($hamburger-height + 1rem) 0 20px;
+  width: max-content;
+}
+
+.sidebar.active {
+  translate: 0;
+}
+
+.auth {
+  img {
+    height: 42px;
+    width: 42px;
+  }
+}
+
+.nav {
+  display: grid;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid $border-color;
+  width: max-content;
+
+  li {
+    width: max-content;
+
+    &:nth-child(n + 3) {
+      position: relative;
+
+      span {
+        right: -27px;
+        bottom: 10px;
+        left: auto;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 490px) {
+  .blur {
+    left: 50vw;
+  }
+
+  .sidebar {
+    translate: -150vw;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .blur {
+    left: 60vw;
+  }
+
+  .sidebar {
+    width: 60vw;
+    translate: -160vw;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'src/assets/styles/vars';
+
+.addToCartBtn {
+  padding: 8px;
+  margin: 0 20px 20px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background: $blue;
+  font-weight: 500;
+  transition: all 50ms ease-in-out;
+  color: #fff;
+
+  &:active {
+    background: #366ad0;
+  }
+}

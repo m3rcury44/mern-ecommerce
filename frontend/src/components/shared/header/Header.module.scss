@@ -1,0 +1,101 @@
+@import "/src/assets/styles/vars";
+
+.header {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid $gray;
+}
+
+.burgerBtn {
+  display: none;
+}
+
+.nav {
+  display: grid;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+  }
+
+  path {
+    user-select: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  a {
+    position: relative;
+  }
+}
+
+@media (hover: hover) {
+  .list {
+    a:hover {
+      p {
+        color: $blue;
+      }
+
+      path {
+        fill: $blue;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .list {
+    a:active {
+      p {
+        color: $blue;
+      }
+
+      path {
+        fill: $blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 790px) {
+  .headerContent {
+    display: grid;
+    justify-content: normal;
+  }
+
+  .headerTopContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .burgerBtn {
+    display: inline-block;
+  }
+
+  .list {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+.skeleton {
+  background-image: linear-gradient(90deg, #f3f3f3, #cecece, #f3f3f3, #cecece);
+  background-size: 300% 100%;
+  border-radius: 6px;
+  animation: animated-gradient 2s infinite linear reverse;
+}
+
+@keyframes animated-gradient {
+  0% {
+    background-position: 0
+  }
+
+  100% {
+    background-position: 100% 0
+  }
+}

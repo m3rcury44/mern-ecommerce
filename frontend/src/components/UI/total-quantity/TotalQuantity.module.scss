@@ -1,0 +1,12 @@
+@import 'src/assets/styles/vars';
+
+.totalQuantity {
+  position: absolute;
+  left: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  background: $background-blue;
+  border-radius: 8px;
+  padding: 0 6px;
+  color: #fff;
+}

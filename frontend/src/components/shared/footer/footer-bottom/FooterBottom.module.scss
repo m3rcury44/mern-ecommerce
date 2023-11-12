@@ -1,0 +1,13 @@
+@import 'src/assets/styles/vars';
+
+.footer {
+  background: #EFF2F4;
+  padding: 20px 0;
+  border-top: 1px solid $gray;
+}
+
+@media (max-width: 790px) {
+  .footer {
+    padding: 20px;
+  }
+}

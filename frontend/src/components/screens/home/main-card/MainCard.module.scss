@@ -1,0 +1,357 @@
+@import 'src/assets/styles/vars';
+
+.mainCard {
+  display: flex;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  justify-content: space-between;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 13px;
+
+  a {
+    padding: 10px;
+    transition: all 108ms ease-in-out;
+    width: 230px;
+  }
+}
+
+@media (hover: hover) {
+  .sidebar {
+    a:hover {
+      font-weight: 600;
+      background: #E5F1FF;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media (hover: none) {
+  .sidebar {
+    a:active {
+      font-weight: 600;
+      background: #E5F1FF;
+      border-radius: 6px;
+    }
+  }
+}
+
+.latestTrending {
+  position: relative;
+  margin-right: 20px;
+
+  img {
+    object-fit: cover;
+    width: 650px;
+    height: 100%;
+  }
+}
+
+.latestTrendingImg {
+  height: 358px !important;
+}
+
+.latestTrendingImgMaxHeight {
+  height: 100% !important;
+}
+
+.latestTrendingText {
+  position: absolute;
+  top: 56px;
+  left: 44px;
+
+  p {
+    font-size: 28px;
+  }
+
+  h2 {
+    margin-bottom: 17px;
+  }
+
+  button {
+    background: #fff;
+  }
+}
+
+.info {
+  display: grid;
+  gap: 10px;
+}
+
+.auth {
+  display: grid;
+  background: #E3F0FF;
+  border-radius: 6px;
+  padding: 12px;
+
+  a {
+    display: grid;
+    text-align: center;
+    border-radius: 6px;
+
+    button {
+      border: none;
+      padding: 7px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+}
+
+.userInfo {
+  display: flex;
+  gap: 9px;
+
+  a {
+    height: max-content;
+  }
+
+  img {
+    height: 42px;
+    width: 42px;
+  }
+}
+
+.logoutButton {
+  background: $background-blue;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+}
+
+.discount {
+  background: #F38332;
+  border-radius: 6px;
+
+  p {
+    color: #fff;
+    padding: 16px;
+  }
+}
+
+.quote {
+  background: #55BDC3;
+  border-radius: 6px;
+
+  p {
+    color: #fff;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .userInfoText {
+    p {
+      font-size: 14px;
+
+      &:first-child {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .userInfo {
+    align-items: center;
+    margin-bottom: 6px;
+
+    p {
+      font-size: 16px;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .latestTrending {
+    img {
+      width: 550px;
+    }
+  }
+
+  .logoutButton {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .latestTrending {
+    img {
+      width: 460px;
+    }
+  }
+
+  .userInfoText {
+    p:first-child {
+      width: 62px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .sidebar {
+    a {
+      width: 200px;
+    }
+  }
+
+  .latestTrending {
+    img {
+      width: 390px;
+    }
+  }
+
+  .latestTrendingText {
+    top: 65px;
+
+    p {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .sidebar {
+    a {
+      width: 170px;
+    }
+  }
+
+  .latestTrending {
+    img {
+      width: 320px;
+    }
+  }
+
+  .latestTrendingText {
+    left: 23px;
+    top: 72px;
+  }
+}
+
+@media (max-width: 790px) {
+  .mainCard {
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+  }
+
+  .discount {
+    display: flex;
+    align-items: center;
+
+    p {
+      padding: 8px;
+    }
+  }
+
+  .quote {
+    display: flex;
+    align-items: center;
+
+    p {
+      padding: 8px;
+    }
+  }
+
+  .latestTrending {
+    width: 100%;
+    margin: 0;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      color: #1c1c1c;
+    }
+
+    h2 {
+      color: #1c1c1c;
+    }
+
+    button {
+      color: $blue;
+    }
+  }
+
+  .latestTrendingText {
+    left: 30px;
+  }
+
+  .auth {
+    padding: 6px;
+
+    a {
+      button {
+        padding: 5px;
+      }
+    }
+  }
+
+  .userInfo {
+    align-items: center;
+  }
+
+  .userInfoText {
+    display: grid;
+    align-content: center;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .latestTrending {
+    height: 290px;
+  }
+
+  .latestTrendingImg {
+    height: 288px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .latestTrending {
+    height: 240px;
+  }
+
+  .latestTrendingImg {
+    height: 238px !important;
+  }
+
+  .latestTrendingText {
+    left: 20px;
+    top: 40px;
+  }
+}

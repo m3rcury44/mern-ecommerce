@@ -1,0 +1,44 @@
+@import 'src/assets/styles/vars';
+
+.searchResults {
+  height: 100%;
+}
+
+.notFound {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.searchList {
+  display: grid;
+  grid-template: auto / repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1090px) {
+  .searchList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 790px) {
+  .searchResults {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .searchList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .notFound {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,28 @@
+.breadcrumbs {
+  margin-bottom: 20px;
+
+  ul {
+    display: flex;
+  }
+}
+
+.crumb {
+  color: #8B96A5;
+
+  &:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: "-->";
+    color: #8B96A5;
+  }
+
+  a {
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 790px) {
+  .breadcrumbs {
+    display: none;
+  }
+}

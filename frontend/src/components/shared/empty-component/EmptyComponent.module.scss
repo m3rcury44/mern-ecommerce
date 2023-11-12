@@ -1,0 +1,25 @@
+.empty {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 790px) {
+  .empty {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 450px) {
+  .empty {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .empty {
+    font-size: 26px;
+  }
+}

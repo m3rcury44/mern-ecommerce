@@ -1,0 +1,95 @@
+@import '/src/assets/styles/vars';
+
+$bar-width: 4px;
+$bar-height: 4px;
+$hamburger-gap: 4px;
+$animation-timing: 200ms ease-in-out;
+$hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
+$x-width: calc($hamburger-height * 1.41421356237);
+
+.popupMenu {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $hamburger-gap;
+  cursor: pointer;
+  z-index: 103;
+  position: absolute;
+}
+
+.popupBar {
+  width: $bar-width;
+  height: $bar-height;
+  background: #000000;
+  transition: all .2s ease-in-out;
+  border-radius: 9999px;
+}
+
+.popupMenu.open .popupBar {
+  transform-origin: left center;
+}
+
+.popupMenu.open .popupBar:nth-child(1) {
+  width: $x-width;
+  rotate: 45deg;
+  translate: 55% calc($bar-height / -2)
+}
+
+.popupMenu.open .popupBar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.popupMenu.open .popupBar:nth-child(3) {
+  width: $x-width;
+  rotate: -45deg;
+  translate: 55% calc($bar-height / 2)
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  border: 1px solid $border-color;
+  transition: .2s ease-in-out;
+  border-radius: 8px;
+  translate: 8%;
+  width: max-content;
+  position: absolute;
+
+  li {
+    background: #fff;
+    pointer-events: none;
+    cursor: pointer;
+
+    &:first-child {
+      color: #0D6EFD;
+      border-bottom: 1px solid $border-color;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    &:last-child {
+      color: #FA3434;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+}
+
+.menu.active {
+  z-index: 200;
+  opacity: 1;
+  transform: translateY(35%);
+
+  li {
+    pointer-events: auto;
+  }
+}

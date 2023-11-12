@@ -1,0 +1,59 @@
+@import '/src/assets/styles/vars';
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  .disabled {
+    cursor: default;
+    color: #8B96A5;
+
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  .active {
+    cursor: default;
+    background: #EFF2F4;
+    color: #8B96A5;
+  }
+
+  button {
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    transition: .1s ease-in-out;
+    background: #fff;
+    font-weight: 500;
+
+    &:first-child {
+      border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    &:last-child,
+    &:first-child {
+      font-weight: 700;
+    }
+
+    &:hover {
+      background: #EFF2F4;
+      color: #8B96A5;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .pagination {
+    margin-right: 10px;
+  }
+}

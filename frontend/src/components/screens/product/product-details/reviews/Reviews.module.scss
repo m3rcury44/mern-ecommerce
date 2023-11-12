@@ -1,0 +1,32 @@
+@import '/src/assets/styles/vars';
+
+.review {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 10px;
+
+  div {
+    div {
+      p {
+        word-break: break-all;
+      }
+    }
+
+    &:first-child {
+      img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        user-select: none;
+      }
+    }
+  }
+}
+
+.removeBtn {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  cursor: pointer;
+}

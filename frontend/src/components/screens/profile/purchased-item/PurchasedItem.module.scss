@@ -1,0 +1,140 @@
+@import 'src/assets/styles/vars';
+
+.adaptiveSkeleton {
+  div {
+    height: 375px;
+  }
+}
+
+.purchasedItem {
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+
+.purchasedItemImg {
+  border-bottom: 1px solid $border-color;
+  text-align: center;
+
+  img {
+    border-radius: 8px;
+    height: 278px;
+    width: 278px;
+    object-fit: contain;
+    padding: 20px;
+  }
+}
+
+.purchasedItemInfo {
+  padding: 20px;
+}
+
+@media (max-width: 1260px) {
+  .purchasedItemImg {
+    img {
+      height: 258px;
+      width: 258px;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .adaptiveSkeleton {
+    div {
+      height: 330px;
+    }
+  }
+
+  .purchasedItemImg {
+    img {
+      height: 233px;
+      width: 233px;
+    }
+  }
+}
+
+@media (max-width: 1090px) {
+  .adaptiveSkeleton {
+    div {
+      height: 305px;
+    }
+  }
+
+  .purchasedItemImg {
+    img {
+      height: 208px;
+      width: 208px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .adaptiveSkeleton {
+    div {
+      height: 355px;
+    }
+  }
+
+  .purchasedItemImg {
+    img {
+      height: 258px;
+      width: 258px;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .purchasedItemImg {
+    img {
+      height: 226px;
+      width: 226px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .purchasedItemImg {
+    img {
+      height: 244px;
+      width: 244px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .adaptiveSkeleton {
+    div {
+      height: 291px;
+    }
+  }
+
+  .purchasedItemImg {
+    img {
+      height: 194px;
+      width: 194px;
+    }
+  }
+
+  .purchasedItemInfo {
+    padding: 20px 8px;
+  }
+}
+
+@media (max-width: 460px) {
+  .adaptiveSkeleton {
+    div {
+      height: 395px;
+    }
+  }
+
+  .purchasedItemInfo {
+    padding: 20px;
+  }
+
+  .purchasedItemImg {
+    img {
+      height: 298px;
+      width: 298px;
+    }
+  }
+}

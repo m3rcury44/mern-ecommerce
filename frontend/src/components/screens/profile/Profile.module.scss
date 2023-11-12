@@ -1,0 +1,105 @@
+@import '/src/assets/styles/vars';
+
+.profile {
+  display: grid;
+  gap: 20px;
+}
+
+.profileInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid $border-color;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+
+  img {
+    height: 200px;
+    width: 200px;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+  }
+}
+
+.nothingPurchased {
+  text-align: center;
+  font-size: 36px;
+  position: relative;
+  top: 90px;
+}
+
+.purchasedItems {
+  margin-top: 10px;
+  display: grid;
+  gap: 20px;
+  grid-template: auto / repeat(4, 1fr);
+}
+
+.loadMoreBtn {
+  border: 1px solid $border-color;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 990px) {
+  .purchasedItems {
+    grid-template: auto / repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 890px) {
+  .purchasedItems {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 790px) {
+  .profile {
+    padding: 20px;
+  }
+
+  .purchasedItems {
+    grid-template: auto / repeat(2, 1fr);
+  }
+
+  .nothingPurchased {
+    font-size: 32px;
+    position: relative;
+    top: 180px;
+  }
+}
+
+@media (max-width: 460px) {
+  .purchasedItems {
+    grid-template: auto / repeat(1, 1fr);
+  }
+
+  .nothingPurchased {
+    font-size: 24px;
+  }
+
+  .profileInfo {
+    gap: 10px;
+    align-items: flex-end;
+
+    img {
+      height: 145px;
+      width: 145px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  .popupMenu {
+    position: relative;
+    bottom: 20px;
+  }
+}

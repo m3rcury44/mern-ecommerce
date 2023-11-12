@@ -1,0 +1,22 @@
+.notAuth {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  align-content: center;
+  height: 100%;
+  font-size: 40px;
+
+  div {
+    display: flex;
+  }
+
+  a {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 450px) {
+  .notAuth {
+    font-size: 32px;
+  }
+}

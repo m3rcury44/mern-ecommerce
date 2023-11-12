@@ -1,0 +1,41 @@
+.favorites {
+  height: 100%;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.favoritesList {
+  display: grid;
+  gap: 20px;
+  grid-template: auto / repeat(4, 1fr);
+}
+
+@media (max-width: 1090px) {
+  .favoritesList {
+    grid-template: auto / repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 790px) {
+  .favoritesList {
+    grid-template: auto / repeat(2, 1fr);
+  }
+
+  .favorites {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .favoritesList {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 460px) {
+  .favoritesList {
+    grid-template: auto / repeat(1, 1fr);
+  }
+}

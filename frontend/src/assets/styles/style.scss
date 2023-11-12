@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "/src/assets/styles/vars";
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1C1C1C;
+}
+
+body {
+  overflow-x: hidden;
+  background: #F7FAFC;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.active {
+  p {
+    color: $blue;
+  }
+
+  path {
+    fill: $blue;
+  }
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+h6 {
+  font-weight: 600;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 890px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 790px) {
+  .container {
+    max-width: none;
+    margin: 0 0 20px 0;
+  }
+}

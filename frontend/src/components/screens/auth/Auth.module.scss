@@ -1,0 +1,103 @@
+@import "/src/assets/styles/vars";
+
+.authForm {
+  display: grid;
+  justify-items: center;
+  height: 100%;
+  align-content: center;
+
+  p {
+    font-weight: 500;
+  }
+
+  a {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (hover: hover) {
+  .authForm {
+    a {
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .form {
+    button {
+      background: $blue;
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 32px;
+      color: #fff;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        background: #366ad0;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .authForm {
+    a {
+      &:active {
+        color: $blue;
+      }
+    }
+  }
+
+  .form {
+    button {
+      background: $blue;
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 32px;
+      color: #fff;
+      transition: all .3s ease-in-out;
+
+      &:active {
+        background: #366ad0;
+      }
+    }
+  }
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 20px;
+
+  input {
+    border: 1px solid $border-color;
+    border-radius: 32px;
+    outline: none;
+    padding: 12px;
+    transition: .2s ease-in-out;
+  }
+
+  p {
+    font-size: 12px;
+    color: $red;
+    margin-left: 10px;
+  }
+
+  .error {
+    border: 1px solid $red;
+  }
+
+  .disabledBtn {
+    background: gray;
+
+    &:hover {
+      background: gray;
+    }
+  }
+}
+
