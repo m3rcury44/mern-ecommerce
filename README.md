@@ -12,7 +12,7 @@ Ecommerce store on the MERN stack
 
 ---
 
-## The main technology stack
+## Technology stack
 
 * [MongoDB](https://www.mongodb.com)
 * [Express](https://expressjs.com)
