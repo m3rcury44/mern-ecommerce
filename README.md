@@ -6,7 +6,7 @@ Ecommerce store on the MERN stack
 
 ## Demo Website
 
-[Vercel](https://mern-ecommerce-h3z6.vercel.app)
+[Vercel](https://mern-ecommerce-cool.vercel.app)
 
 [![img](https://i.imgur.com/LHS9McK.png)](https://mern-ecommerce-cool.vercel.app)
 
